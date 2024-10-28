@@ -13,10 +13,9 @@ Puedes clonar la aplicacion directamente desde GitHub o descargar un archivo .zi
 
 ```bash
 # Clonar el repositorio
-git clone https://github.com/usuario/repo.git
+https://github.com/Miguel031/Test1-TaskManagerConsole.git
 
-# Navegar al directorio
-cd repo
+# Navegar carpetas
+Para ejecutar el programa puede buscar el archivo que termina en .sln y darle doble click o
+puede dar click derecho dentro de la carpeta y abrir con Visual Studio 2022
 
-# Instalar dependencias
-dotnet restore
