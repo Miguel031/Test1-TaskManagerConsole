@@ -1,0 +1,22 @@
+# TaskManagerConsole
+
+Es un proyecto gestor de tareas, sus principales funciones son Crear, Eliminar, Marcar Como Completa, Lista por Id, Listar Pendientes y Listar Todas las tareas.
+La solucion tiene dos proyectos, una Console App que funciona con .NET 6, y una Web Api con ASP.NET Core, que funciona con .NET 6.
+Las tareas se guardan en un archivo de texto que se crea cuando se usa por primera vez la aplicacion, denominado tareas.txt.
+Al ejecutar la app, se ejecutan ambos proyectos simultaneamente, la Console App consume la Web Api, 
+donde se encuentra la logica de negocio, los modelos y el controlador.
+
+## Instalación
+
+Solo se necesita tener .net 6 instalado.
+Puedes clonar la aplicacion directamente desde GitHub o descargar un archivo .zip y descomprimirlo.
+
+```bash
+# Clonar el repositorio
+git clone https://github.com/usuario/repo.git
+
+# Navegar al directorio
+cd repo
+
+# Instalar dependencias
+dotnet restore
