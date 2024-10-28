@@ -6,6 +6,7 @@ class Program
 {
     static async Task Main(string[] args)
     {
+        //Actualizar el puerto si es necesario, dependiendo en que puerto se ejecuta el ApiClient
         var client = new HttpClient { BaseAddress = new Uri("https://localhost:7181") };
         var apiClient = new Client(client);
 

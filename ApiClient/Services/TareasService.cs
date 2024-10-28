@@ -18,7 +18,7 @@ namespace Services
             contadorId = 1;
             CargarTareasDeArchivo(archivoTareas);
         }
-
+        //Crear una nueva tarea y añadirla al archivo de texto
         public void AgregarTarea(string descripcion)
         {
             var tarea = new Tareas(contadorId, descripcion);
@@ -26,13 +26,14 @@ namespace Services
             contadorId++;
             GuardarTareasEnArchivo();
         }
+        //Elimina una tarea del archivo de texto
 
         public void EliminarTarea(int id)
         {
             tareas.RemoveAll(t => t.Id == id);
             GuardarTareasEnArchivo();
         }
-
+        //Marca como completa una tarea en el archivo de texto
         public void MarcarTareaCompleta(int id)
         {
             var tarea = tareas.Find(t => t.Id == id);
@@ -42,6 +43,7 @@ namespace Services
                 GuardarTareasEnArchivo();
             }
         }
+        //Tres funciones para listar las tareas desde el archivo de texto
 
         public List<Tareas> ObtenerTareasPendientes()
         {
@@ -57,7 +59,8 @@ namespace Services
         {
             return tareas;
         }
-
+        //Funciones para acceder al archivo de texto
+        #region ArchivoTexto
         private void GuardarTareasEnArchivo()
         {
             using (StreamWriter writer = new StreamWriter(archivoTareas))
@@ -89,5 +92,6 @@ namespace Services
                 }
             }
         }
+        #endregion
     }
 }
