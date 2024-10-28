@@ -1,0 +1,2 @@
+1|uno|True
+2|uno|False
